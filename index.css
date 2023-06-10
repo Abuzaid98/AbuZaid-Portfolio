@@ -59,7 +59,7 @@ nav a:hover,
 header h1 a:hover,
 .active-nav{color: #0166d2; }
 
-.wrap-2{ padding: 0; color: #fff;overflow: hidden; background: linear-gradient(90deg,#007bff,#00c8ff); background-size: cover; height: 580px; position: relative;}
+.wrap-2{ padding: 0; color: #fff;overflow: hidden; background: linear-gradient(90deg,#007bff,#00c8ff); background-size: cover; position: relative;}
 .wrap-2 .all-text{padding: 50px 0;}
 .wrap-2 .all-text h2{font-size: 5rem; padding: 20px 0; animation: all .7s linear;}
 .wrap-2 .all-text h2 span{color: #fff;}
