@@ -85,7 +85,7 @@ let typed = new Typed('#element , #element2', {
     strings: [' Web Developer.', ' Web Designer'," UI Designer",' Web Developer.', ' Web Designer'," UI Designer"],
     typeSpeed: 50,
   });
-  
+   
 //portfolio click fade only specific project
 
   $("#portfolio .col-4:has(.port-img)").fadeOut();
