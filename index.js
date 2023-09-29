@@ -82,7 +82,7 @@ document.querySelectorAll(".nav-link").forEach(function (anchor) {
 // typed.js   text animate
 
 let typed = new Typed('#element , #element2', {
-    strings: [' Web Developer.', ' Web Designer'," UI Designer",' Web Developer.', ' Web Designer'," UI Designer"],
+    strings: ['React JS Developer', ' Web Developer'," Frontend Developer"],
     typeSpeed: 50,
   });
    
