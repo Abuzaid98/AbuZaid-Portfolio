@@ -1,5 +1,5 @@
 "use strict ;"
- 
+
 // toggle icon bar
 
 let menuIcon = document.querySelector("#menu-icon");
@@ -78,44 +78,44 @@ document.querySelectorAll(".nav-link").forEach(function (anchor) {
 
     });
 });
- 
+
 // typed.js   text animate
 
 let typed = new Typed('#element , #element2', {
-    strings: ['React JS Developer', ' Web Developer'," Frontend Developer"],
+    strings: [' Web Developer.', 'Frontend Developer.', "React JS Developer.", ' Web Developer.', 'Frontend Developer.', "React JS Developer."],
     typeSpeed: 50,
-  });
-   
+});
+
 //portfolio click fade only specific project
 
-  $("#portfolio .col-4:has(.port-img)").fadeOut();
-  $("#portfolio .col-4:has(.html)").fadeIn();
+$("#portfolio .col-4:has(.port-img)").fadeOut();
+$("#portfolio .col-4:has(.react)").fadeIn();
 
-$("#portfolio button").click(function(){
+$("#portfolio button").click(function () {
     $("#portfolio button").removeClass("active")
     $(this).addClass("active")
 
-    if( $(this).text()=="HTML, CSS & JS" ){
+    if ($(this).text() == "HTML, CSS & JS") {
         $("#portfolio .col-4:has(.port-img)").fadeOut();
         $("#portfolio .col-4:has(.html)").fadeIn();
     }
-    else  if( $(this).text()=="HTML, SASS & JS" ){
+    else if ($(this).text() == "HTML, SASS & JS") {
         $("#portfolio .col-4:has(.port-img)").fadeOut();
         $("#portfolio .col-4:has(.sass)").fadeIn();
     }
-    else  if( $(this).text()=="Fetch API" ){
+    else if ($(this).text() == "Fetch API") {
         $("#portfolio .col-4:has(.port-img)").fadeOut();
         $("#portfolio .col-4:has(.api)").fadeIn();
     }
-    else  if( $(this).text()=="JavaScript" ){
+    else if ($(this).text() == "JavaScript") {
         $("#portfolio .col-4:has(.port-img)").fadeOut();
         $("#portfolio .col-4:has(.js)").fadeIn();
     }
-    else  if( $(this).text()=="Boostrap" ){
+    else if ($(this).text() == "React JS") {
         $("#portfolio .col-4:has(.port-img)").fadeOut();
-        $("#portfolio .col-4:has(.bootstrap)").fadeIn();
+        $("#portfolio .col-4:has(.react)").fadeIn();
     }
-    
+
 
 })
 
