@@ -20,7 +20,7 @@ window.addEventListener('scroll',()=> {
     // console.log(scrolled)
     console.log(scroll)
     console.log(totalHeight)
-    if(scrolled > 21){
+    if(scrolled > 16){
         scrollBar.style.backgroundColor = '#AB1C3D' ;
         scrollBar.style.width = scrolled + "%";
     }else{
