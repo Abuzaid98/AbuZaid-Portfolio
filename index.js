@@ -10,7 +10,23 @@ menuIcon.addEventListener("click", function () {
     nav.classList.toggle("slide-nav");
 })
 
+// scrollbar line
+window.addEventListener('scroll',()=> {
+    let scrollBar = document.querySelector('.scrollBar')
 
+    let scroll = document.documentElement.scrollTop;
+    let totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (scroll / totalHeight) * 100;
+    // console.log(scrolled)
+    console.log(scroll)
+    console.log(totalHeight)
+    if(scrolled > 21){
+        scrollBar.style.backgroundColor = '#AB1C3D' ;
+        scrollBar.style.width = scrolled + "%";
+    }else{
+        scrollBar.style = `width:${scrolled}%; background-color:#007bff;`
+    }
+  })
 
 // scroll section active link 
 
