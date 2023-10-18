@@ -70,7 +70,7 @@ header h1 a:hover,
 .wrap-2 .cv-btn:hover {background-color: #fff; color: #007bff;}
 .my-image{display: flex; justify-content: flex-end;}
 .my-image img{object-fit: cover; width: 100%;}
-.mobile-photo{display: none;}
+/* .mobile-photo{display: none;} */
 
 section{padding: 6rem 0;}
 .wrap-3 span{margin-top: 4px;font-weight: bold;}
@@ -189,7 +189,7 @@ a.go-top:hover{box-shadow: inset 0 0 10px #fff; color: #fff; background: transpa
     .wrap-2 .all-text h2 { font-size: 4rem;} 
     .wrap-2{min-height: 640px;}
     .wrap-2 .row{flex-flow: column-reverse;}
-    .pc{display: none;}
+    /* .pc{display: none;} */
     .my-image{justify-content: center;}
     .my-image img{ width: 72%; border-radius: 0 0 50% 50%;}
     .wrap-2 .all-text {padding: 10px 0;}
