@@ -111,12 +111,14 @@ section{padding: 6rem 0;}
 .port-img{position: relative; overflow: hidden; border-radius: 2rem; height: 99%;  box-shadow: 0 0 10px #000;}
 .p-img { margin-bottom: 3rem; }
 .p-img img{width: 100%; height: 100%; object-fit: cover; border-radius: 2rem;}
-.port-text{color: #fff;  position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; border-radius: 2rem; background: linear-gradient(#ffffff1d,#e65f78e5,#e65f78); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; transform: translateY(100%); transition: all .4s ease;}
+.port-text{color: #fff;  position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; border-radius: 2rem; 
+    background: linear-gradient(135deg,#007bffdb,#e65f78e5,#007bff91);
+    display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; transform: translateY(100%); transition: all .4s ease;}
 .p-img:hover .port-text{transform: translateY(0);}
 .port-text h3{  font-size: 2.5rem; margin-bottom: 10px;}
 .port-text p{  font-size: 1.8rem; margin-bottom: 10px;}
 .port-text a{  border: 2px solid #fff; padding: 10px 15px; border-radius: 20px; margin-top: 20px; transition: all .3s ease;}
-.port-text a:hover{  background: #7c7a7aba;}
+.port-text a:hover{  background: #007bff;}
  
 .wrap-6{ background: #e2e0e037;}
 .wrap-6 .contact-area{width: 80%; margin: auto;}

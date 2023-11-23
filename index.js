@@ -18,8 +18,8 @@ window.addEventListener('scroll',()=> {
     let totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrolled = (scroll / totalHeight) * 100;
     // console.log(scrolled)
-    console.log(scroll)
-    console.log(totalHeight)
+    // console.log(scroll)
+    // console.log(totalHeight)
     if(scrolled > 16){
         scrollBar.style.backgroundColor = '#AB1C3D' ;
         scrollBar.style.width = scrolled + "%";
@@ -104,14 +104,16 @@ let typed = new Typed('#element , #element2', {
 
 //portfolio click fade only specific project
 
-$("#portfolio .col-4:has(.port-img)").fadeOut();
-$("#portfolio .col-4:has(.react)").fadeIn();
+$("#portfolio .col-4:has(.port-img)").fadeIn();
 
 $("#portfolio button").click(function () {
     $("#portfolio button").removeClass("active")
     $(this).addClass("active")
 
-    if ($(this).text() == "HTML, CSS & JS") {
+    if ($(this).text() == "All Projects") {
+        $("#portfolio .col-4:has(.port-img)").fadeIn();
+    }
+    else if ($(this).text() == "HTML, CSS & JS") {
         $("#portfolio .col-4:has(.port-img)").fadeOut();
         $("#portfolio .col-4:has(.html)").fadeIn();
     }
