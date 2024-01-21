@@ -102,36 +102,36 @@ let typed = new Typed('#element , #element2', {
     typeSpeed: 50,
 });
 
-//portfolio click fade only specific project
+//projects click fade only specific project
 
-$("#portfolio .col-4:has(.port-img)").fadeIn();
+$("#projects .col-4:has(.port-img)").fadeIn();
 
-$("#portfolio button").click(function () {
-    $("#portfolio button").removeClass("active")
+$("#projects button").click(function () {
+    $("#projects button").removeClass("active")
     $(this).addClass("active")
 
     if ($(this).text() == "All Projects") {
-        $("#portfolio .col-4:has(.port-img)").fadeIn();
+        $("#projects .col-4:has(.port-img)").fadeIn();
     }
     else if ($(this).text() == "HTML, CSS & JS") {
-        $("#portfolio .col-4:has(.port-img)").fadeOut();
-        $("#portfolio .col-4:has(.html)").fadeIn();
+        $("#projects .col-4:has(.port-img)").fadeOut();
+        $("#projects .col-4:has(.html)").fadeIn();
     }
     else if ($(this).text() == "HTML, SASS & JS") {
-        $("#portfolio .col-4:has(.port-img)").fadeOut();
-        $("#portfolio .col-4:has(.sass)").fadeIn();
+        $("#projects .col-4:has(.port-img)").fadeOut();
+        $("#projects .col-4:has(.sass)").fadeIn();
     }
     else if ($(this).text() == "Fetch API") {
-        $("#portfolio .col-4:has(.port-img)").fadeOut();
-        $("#portfolio .col-4:has(.api)").fadeIn();
+        $("#projects .col-4:has(.port-img)").fadeOut();
+        $("#projects .col-4:has(.api)").fadeIn();
     }
     else if ($(this).text() == "JavaScript") {
-        $("#portfolio .col-4:has(.port-img)").fadeOut();
-        $("#portfolio .col-4:has(.js)").fadeIn();
+        $("#projects .col-4:has(.port-img)").fadeOut();
+        $("#projects .col-4:has(.js)").fadeIn();
     }
     else if ($(this).text() == "React JS") {
-        $("#portfolio .col-4:has(.port-img)").fadeOut();
-        $("#portfolio .col-4:has(.react)").fadeIn();
+        $("#projects .col-4:has(.port-img)").fadeOut();
+        $("#projects .col-4:has(.react)").fadeIn();
     }
 
 
