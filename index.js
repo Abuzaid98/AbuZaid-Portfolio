@@ -11,7 +11,7 @@ menuIcon.addEventListener("click", function () {
 })
 
 // scrollbar line
-window.addEventListener('scroll',()=> {
+window.addEventListener('scroll', () => {
     let scrollBar = document.querySelector('.scrollBar')
 
     let scroll = document.documentElement.scrollTop;
@@ -20,13 +20,13 @@ window.addEventListener('scroll',()=> {
     // console.log(scrolled)
     // console.log(scroll)
     // console.log(totalHeight)
-    if(scrolled > 16){
-        scrollBar.style.backgroundColor = '#AB1C3D' ;
+    if (scrolled > 16) {
+        scrollBar.style.backgroundColor = '#AB1C3D';
         scrollBar.style.width = scrolled + "%";
-    }else{
+    } else {
         scrollBar.style = `width:${scrolled}%; background-color:#007bff;`
     }
-  })
+})
 
 // scroll section active link 
 
@@ -102,42 +102,88 @@ let typed = new Typed('#element , #element2', {
     typeSpeed: 50,
 });
 
-//projects click fade only specific project
+// //projects click fade only specific project
 
-$("#projects .col-4:has(.port-img)").fadeIn();
+// $("#projects .col-4:has(.port-img)").fadeIn();
 
+// $("#projects button").click(function () {
+//     $("#projects button").removeClass("active")
+//     $(this).addClass("active")
+
+//     if ($(this).text() == "All Projects") {
+//         $("#projects .col-4:has(.port-img)").fadeIn();
+//     }
+//     else if ($(this).text() == "HTML, CSS & JS") {
+//         $("#projects .col-4:has(.port-img)").fadeOut();
+//         $("#projects .col-4:has(.html)").fadeIn();
+//     }
+//     else if ($(this).text() == "HTML, SASS & JS") {
+//         $("#projects .col-4:has(.port-img)").fadeOut();
+//         $("#projects .col-4:has(.sass)").fadeIn();
+//     }
+//     else if ($(this).text() == "Fetch API") {
+//         $("#projects .col-4:has(.port-img)").fadeOut();
+//         $("#projects .col-4:has(.api)").fadeIn();
+//     }
+//     else if ($(this).text() == "JavaScript") {
+//         $("#projects .col-4:has(.port-img)").fadeOut();
+//         $("#projects .col-4:has(.js)").fadeIn();
+//     }
+//     else if ($(this).text() == "React JS") {
+//         $("#projects .col-4:has(.port-img)").fadeOut();
+//         $("#projects .col-4:has(.react)").fadeIn();
+//     }
+
+
+// })
+
+// Filter projects by category
 $("#projects button").click(function () {
-    $("#projects button").removeClass("active")
-    $(this).addClass("active")
+    const category = $(this).text().trim().toLowerCase();
+    $("#projects button").removeClass("active");
+    $(this).addClass("active");
 
-    if ($(this).text() == "All Projects") {
-        $("#projects .col-4:has(.port-img)").fadeIn();
-    }
-    else if ($(this).text() == "HTML, CSS & JS") {
-        $("#projects .col-4:has(.port-img)").fadeOut();
-        $("#projects .col-4:has(.html)").fadeIn();
-    }
-    else if ($(this).text() == "HTML, SASS & JS") {
-        $("#projects .col-4:has(.port-img)").fadeOut();
-        $("#projects .col-4:has(.sass)").fadeIn();
-    }
-    else if ($(this).text() == "Fetch API") {
-        $("#projects .col-4:has(.port-img)").fadeOut();
-        $("#projects .col-4:has(.api)").fadeIn();
-    }
-    else if ($(this).text() == "JavaScript") {
-        $("#projects .col-4:has(.port-img)").fadeOut();
-        $("#projects .col-4:has(.js)").fadeIn();
-    }
-    else if ($(this).text() == "React JS") {
-        $("#projects .col-4:has(.port-img)").fadeOut();
-        $("#projects .col-4:has(.react)").fadeIn();
-    }
+    const $items = $(".port-img");
+    const $parents = $items.parent();
+    let completed = 0;
+    const total = $parents.length;
 
-
-})
+    // Fade out all items
+    $parents.stop(true, true).fadeOut(200, function () {
+        completed++;
+        if (completed === total) {
+            // All fadeOut animations finished
+            if (category === "all projects") {
+                $parents.fadeIn(200);
+            } else {
+                $items.each(function () {
+                    const itemCategory = $(this).data("category")?.toLowerCase();
+                    if (itemCategory === category) {
+                        $(this).parent().fadeIn(200);
+                    }
+                });
+            }
+        }
+    });
+});
 
 
+
+// Calculate and display age based on birthdate
+$(document).ready(function () {
+    // Your birthdate: 8th June 1998
+    var birthDate = new Date(1998, 5, 8); // Month is 0-indexed: 5 = June
+    var today = new Date();
+
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--; // Adjust if birthday hasn't occurred yet this year
+    }
+
+    $('#my-age').text(age);
+});
 
 
 
