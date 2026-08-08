@@ -8,7 +8,7 @@
     <meta name="description"
         content="Abu Zaid — React.js Developer with 2.5 years of experience building fast, responsive web applications using React Hooks, Redux Toolkit, and REST API integration. Explore my projects and get in touch for React.js Developer roles.">
     <meta name="keywords"
-        content="Abu Zaid, React.js Developer, Frontend Developer, React Developer Delhi, React Developer NCR, JavaScript Developer, Redux Toolkit, REST API Integration, Web Developer Portfolio">
+        content="Abu Zaid, React.js Developer, Frontend Developer, React Developer Delhi, React Developer NCR, JavaScript Developer, Redux Toolkit, REST API Integration, Web Developer Portfolio, React.js Developer Portfolio, Portfolio">
     <meta name="author" content="Abu Zaid">
     <link rel="canonical" href="https://abuzaid-portfolio.netlify.app/">
 
@@ -30,6 +30,24 @@
 
     <link rel="icon" href="img/icon.webp">
     <title>Abu Zaid | React.js Developer Portfolio</title>
+
+    <!-- Theme: set before first paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="./index.css">
 
@@ -66,46 +84,72 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 logo col-12-m">
-                    <h1><a href="/">ABU ZAID</a></h1>
-                    <div><i class="fa-solid fa-bars" id="menu-icon"></i></div>
+                    <h1><a href="/"><span class="brace">&lt;</span>AbuZaid<span class="brace"> /&gt;</span></a></h1>
+                    <div class="header-tools">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </button>
+                        <i class="fa-solid fa-bars" id="menu-icon"></i>
+                    </div>
                 </div>
                 <nav class="col-6 col-12-m">
-
                     <ul>
                         <li><a href="#home" class="nav-link active-nav">Home</a></li>
                         <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#journey" class="nav-link">Journey</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
                         <li><a href="#services" class="nav-link">Services</a></li>
                         <li><a href="#projects" class="nav-link">Projects</a></li>
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
-
                 </nav>
-
             </div>
         </div>
     </header>
 
     <section class="wrap-2" id="home">
+        <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
         <div class="container">
             <div class="row">
                 <div class="col-8 col-12-mp">
                     <div class="all-text">
-                        <h2>Hi, My Name Is <span>Abu Zaid</span><br> And I Am a Passionate <br>
-                            <span id="element">
-                                Frontend Developer
-                            </span>
-                        </h2>
-                        <p class="small-text">
+                        <span class="hero-kicker">// hero.jsx</span>
+
+                        <div class="terminal">
+                            <div class="terminal-bar">
+                                <div class="terminal-dots"><span></span><span></span><span></span></div>
+                                <div class="terminal-tab">developer.js</div>
+                            </div>
+                            <div class="terminal-body">
+                                <div><span class="ln">1</span><span class="tok-key">const</span> developer <span class="tok-punc">=</span> <span class="tok-punc">{</span></div>
+                                <div><span class="ln">2</span>&nbsp;&nbsp;name<span class="tok-punc">:</span> <span class="tok-str">'Abu Zaid'</span><span class="tok-punc">,</span></div>
+                                <div><span class="ln">3</span>&nbsp;&nbsp;role<span class="tok-punc">:</span> <span class="tok-str">'</span><span id="typed-role"></span><span class="tok-str">'</span><span class="tok-punc">,</span></div>
+                                <div><span class="ln">4</span>&nbsp;&nbsp;experience<span class="tok-punc">:</span> <span class="tok-str">'2.5 years'</span><span class="tok-punc">,</span></div>
+                                <div><span class="ln">5</span><span class="tok-punc">}</span><span class="tok-punc">;</span></div>
+                            </div>
+                        </div>
+
+                        <p class="small-text hero-lede">
                             I'm a React.js Developer with 2.5 years of experience building fast, responsive web
                             applications — from Figma to deployment. Let me help bring your vision online.
                         </p>
-                        <a target="_blank" href="./img/abu_zaid_frontend_developer_react_js.pdf" class="cv-btn">DOWNLOAD
-                            CV</a>
+                        <div class="hero-ctas">
+                            <a target="_blank" href="./img/abu_zaid_frontend_developer_react_js.pdf" class="cv-btn">DOWNLOAD CV</a>
+                            <a href="#projects" class="btn btn-outline nav-link">VIEW PROJECTS</a>
+                        </div>
+                        <div class="hero-socials">
+                            <a href="https://github.com/Abuzaid98" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/abuzaid98" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://wa.me/7007282772" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4 my-image col-12-mp">
-                    <!-- <img src="img/port.webp" alt="" class="pc"> -->
-                    <img src="img/profile.webp" alt="Abu Zaid - React.js Developer" class="mobile-photo">
+                    <div class="hero-portrait">
+                        <img src="img/profile.webp" alt="Abu Zaid - React.js Developer">
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,14 +157,15 @@
 
     <section class="wrap-3" id="about">
         <div class="container">
-            <span class="dpink">Biography</span>
-            <h2>About <span>Me!</span></h2>
+            <div class="section-head">
+                <span class="eyebrow">// About</span>
+                <h2>About <span>Me!</span></h2>
+            </div>
             <div class="row">
                 <div class="col-4 col-12-m">
                     <div class="file-photo">
                         <img src="img/profile.jpg" alt="profile photo">
                     </div>
-
                 </div>
                 <div class="col-8 col-12-m all-about">
                     <h3>I'm Abu Zaid ,<span id="element2"> Web Developer</span></h3>
@@ -179,10 +224,94 @@
         </div>
     </section>
 
+    <section class="wrap-journey" id="journey">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">// Journey</span>
+                <h2>How I Got <span>Here!</span></h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line">
+                    <div class="timeline-line-fill"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fa-solid fa-seedling"></i></div>
+                    <span class="timeline-tag">Phase 01</span>
+                    <h3>Foundations</h3>
+                    <p>Learned core web development — HTML5, CSS3, and JavaScript (ES6+) — and started building
+                        real client sites across WordPress, Shopify, and plain HTML/CSS/SASS builds.</p>
+                    <div class="timeline-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fa-solid fa-briefcase"></i></div>
+                    <span class="timeline-tag">2.5 Years</span>
+                    <h3>React.js Developer — NexGen Innovators</h3>
+                    <p>Building production-ready web applications with React Hooks, Redux Toolkit, and REST API
+                        integration — focused on performance, clean component architecture, and responsive UI.</p>
+                    <div class="timeline-tags">
+                        <span>React</span><span>Redux Toolkit</span><span>REST APIs</span><span>Tailwind CSS</span><span>Bootstrap</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fa-solid fa-rocket"></i></div>
+                    <span class="timeline-tag">Ongoing</span>
+                    <h3>Now — Leveling Up</h3>
+                    <p>Expanding into full-stack development with Next.js and the MERN stack, so I can take a
+                        product from frontend to backend without handing it off.</p>
+                    <div class="timeline-tags">
+                        <span>Next.js</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrap-skills" id="skills">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">// Stack</span>
+                <h2>Tools I Build <span>With!</span></h2>
+            </div>
+
+            <div class="stack-group">
+                <div class="stack-group-label">Core stack</div>
+                <div class="stack-grid" id="stackCore">
+                    <div class="tech-card" data-icon="javascript" data-name="JavaScript"></div>
+                    <div class="tech-card" data-icon="react" data-name="React"></div>
+                    <div class="tech-card" data-icon="redux" data-name="Redux"></div>
+                    <div class="tech-card" data-icon="typescript" data-name="TypeScript"></div>
+                    <div class="tech-card" data-icon="html5" data-name="HTML5"></div>
+                    <div class="tech-card" data-icon="css3" data-name="CSS3"></div>
+                    <div class="tech-card" data-icon="tailwindcss" data-name="Tailwind CSS" data-variant="plain"></div>
+                    <div class="tech-card" data-icon="bootstrap" data-name="Bootstrap"></div>
+                    <div class="tech-card" data-icon="git" data-name="Git"></div>
+                </div>
+            </div>
+
+            <div class="stack-group">
+                <div class="stack-group-label">Currently learning <span class="pill">In progress</span></div>
+                <div class="stack-grid" id="stackLearning">
+                    <div class="tech-card" data-icon="nextjs" data-name="Next.js"></div>
+                    <div class="tech-card" data-icon="nodejs" data-name="Node.js"></div>
+                    <div class="tech-card" data-icon="express" data-name="Express"></div>
+                    <div class="tech-card" data-icon="mongodb" data-name="MongoDB"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="wrap-4" id="services">
         <div class="container">
-            <span class="dpink">Services</span>
-            <h2>Quality <span>Services!</span></h2>
+            <div class="section-head">
+                <span class="eyebrow">// Services</span>
+                <h2>Quality <span>Services!</span></h2>
+            </div>
             <div class="row all-type-work">
                 <div class="col-4 mtop40 col-6-m col-12-mp">
                     <div class="ser">
@@ -235,7 +364,7 @@
 
             </div>
             <p class="fwork">
-                Are you interested in working with me? <span><a href="#contact">Let's started now</a></span>
+                Are you interested in working with me? <span><a href="#contact" class="nav-link">Let's started now</a></span>
             </p>
 
         </div>
@@ -243,8 +372,10 @@
 
     <section class="wrap-5" id="projects">
         <div class="container">
-            <span class="dpink">Projects</span>
-            <h2>Featured <span>Works!</span></h2>
+            <div class="section-head">
+                <span class="eyebrow">// Projects</span>
+                <h2>Featured <span>Works!</span></h2>
+            </div>
             <div class="nav2">
                 <ul>
                     <li><button class="active">All Projects</button></li>
@@ -438,30 +569,37 @@
     <section class="wrap-6" id="contact">
         <div class="container">
             <div class="contact-area">
+                <span class="eyebrow flex-center">// Contact</span>
                 <h2>Contact <span>Me!</span> </h2>
 
                 <h3>Let's work together!</h3>
                 <p>Alone we can do so little; together we can do so much.</p>
-                <a href="tel:7007282772" class="flex pink">
-                    <span><i class="fa-solid fa-phone"></i></span>
-                    <label>Call Directly:</label><span><i class="fa-solid fa-arrow-right-arrow-left"></i></span>+91
-                    7007282772
-                </a>
-                <a href="mailto:abuzaid8698@gmail.com" target="_blank" class="flex pink">
-                    <span><i class="fa-solid fa-envelope"></i></span>
-                    <label>Drop a Mail:</label><span><i
-                            class="fa-solid fa-arrow-right-arrow-left"></i></span>abuzaid8698@gmail.com
-                </a>
-                <a href="https://wa.me/7007282772" target="_blank" class="flex pink">
-                    <span><i class="fa-brands fa-whatsapp"></i></span>
-                    <label>Send Message:</label><span><i class="fa-solid fa-arrow-right-arrow-left"></i></span>WhatsApp
-                </a>
-                <a href="https://www.linkedin.com/in/abuzaid98" target="_blank" class="flex pink">
-                    <span><i class="fa-brands fa-linkedin"></i></span>
-                    <label>Contact Me:</label><span><i class="fa-solid fa-arrow-right-arrow-left"></i></span>Linkedin
-                </a>
-
-
+                <div class="contact-links">
+                    <a href="tel:7007282772" class="flex pink">
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <span class="flex" style="flex-direction: column; align-items: flex-start;">
+                            <label>Call Directly</label><span class="value">+91 7007282772</span>
+                        </span>
+                    </a>
+                    <a href="mailto:abuzaid8698@gmail.com" target="_blank" class="flex pink">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <span class="flex" style="flex-direction: column; align-items: flex-start;">
+                            <label>Drop a Mail</label><span class="value">abuzaid8698@gmail.com</span>
+                        </span>
+                    </a>
+                    <a href="https://wa.me/7007282772" target="_blank" class="flex pink">
+                        <span><i class="fa-brands fa-whatsapp"></i></span>
+                        <span class="flex" style="flex-direction: column; align-items: flex-start;">
+                            <label>Send Message</label><span class="value">WhatsApp</span>
+                        </span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abuzaid98" target="_blank" class="flex pink">
+                        <span><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="flex" style="flex-direction: column; align-items: flex-start;">
+                            <label>Contact Me</label><span class="value">LinkedIn</span>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -500,9 +638,11 @@
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
     <script src="./index.js"></script>
 
