@@ -592,7 +592,7 @@ footer {
     margin: 0 0 0 3rem;
 }
 
-a.go-top:hover {
+go-top:hover {
     box-shadow: inset 0 0 10px #fff;
     color: #fff;
     background: transparent;

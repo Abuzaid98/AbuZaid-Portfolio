@@ -102,40 +102,6 @@ let typed = new Typed('#element , #element2', {
     typeSpeed: 50,
 });
 
-// //projects click fade only specific project
-
-// $("#projects .col-4:has(.port-img)").fadeIn();
-
-// $("#projects button").click(function () {
-//     $("#projects button").removeClass("active")
-//     $(this).addClass("active")
-
-//     if ($(this).text() == "All Projects") {
-//         $("#projects .col-4:has(.port-img)").fadeIn();
-//     }
-//     else if ($(this).text() == "HTML, CSS & JS") {
-//         $("#projects .col-4:has(.port-img)").fadeOut();
-//         $("#projects .col-4:has(.html)").fadeIn();
-//     }
-//     else if ($(this).text() == "HTML, SASS & JS") {
-//         $("#projects .col-4:has(.port-img)").fadeOut();
-//         $("#projects .col-4:has(.sass)").fadeIn();
-//     }
-//     else if ($(this).text() == "Fetch API") {
-//         $("#projects .col-4:has(.port-img)").fadeOut();
-//         $("#projects .col-4:has(.api)").fadeIn();
-//     }
-//     else if ($(this).text() == "JavaScript") {
-//         $("#projects .col-4:has(.port-img)").fadeOut();
-//         $("#projects .col-4:has(.js)").fadeIn();
-//     }
-//     else if ($(this).text() == "React JS") {
-//         $("#projects .col-4:has(.port-img)").fadeOut();
-//         $("#projects .col-4:has(.react)").fadeIn();
-//     }
-
-
-// })
 
 // Filter projects by category
 $("#projects button").click(function () {
@@ -183,7 +149,13 @@ $(document).ready(function () {
     }
 
     $('#my-age').text(age);
+
 });
 
 
-
+$(document).ready(function () {
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById("goTopBtn").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+})
