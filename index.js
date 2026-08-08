@@ -106,8 +106,14 @@ document.querySelectorAll(".nav-link").forEach(function (anchor) {
     });
 });
 
-document.getElementById("goTopBtn").addEventListener("click", function () {
+const goTopBtn = document.getElementById("goTopBtn");
+
+goTopBtn.addEventListener("click", function () {
     scrollToTarget(0);
+});
+
+window.addEventListener("scroll", function () {
+    goTopBtn.classList.toggle("is-visible", window.scrollY > 300);
 });
 
 // ---------- typed.js text animation ----------
