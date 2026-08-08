@@ -201,6 +201,29 @@ if (window.gsap && window.ScrollTrigger) {
         scrollTrigger: { trigger: ".all-about", start: "top 82%" }
     });
 
+    // experience cards — settle-then-stagger entrance (the section's own signature moment)
+    gsap.utils.toArray(".exp-card").forEach((card) => {
+        if (prefersReducedMotion) {
+            gsap.from(card, {
+                opacity: 0, duration: .5, ease: "power1.out",
+                scrollTrigger: { trigger: card, start: "top 85%" }
+            });
+            return;
+        }
+
+        gsap.timeline({ scrollTrigger: { trigger: card, start: "top 82%" } })
+            .from(card, { opacity: 0, y: 50, scale: .94, duration: .8, ease: "power4.out" })
+            .from(card.querySelector(".exp-mark"), {
+                opacity: 0, scale: .5, rotate: -12, duration: .5, ease: "back.out(2.2)"
+            }, "-=.45")
+            .from(card.querySelectorAll(".exp-status, .exp-duration"), {
+                opacity: 0, x: 16, duration: .45, stagger: .08, ease: "power3.out"
+            }, "-=.4")
+            .from(card.querySelectorAll(".exp-bullets li, .exp-desc, .exp-cert"), {
+                opacity: 0, x: -18, duration: .45, stagger: .09, ease: "power3.out"
+            }, "-=.25");
+    });
+
     // timeline
     gsap.to(".timeline-line-fill", {
         height: "100%",
