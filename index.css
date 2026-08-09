@@ -344,6 +344,27 @@ header h1 a .brace {
 :root[data-theme="dark"] .theme-toggle .fa-sun { display: inline-block; }
 :root[data-theme="dark"] .theme-toggle .fa-moon { display: none; }
 
+@media (min-width: 768.5px) {
+    header .container {
+        position: relative;
+    }
+
+    header nav ul {
+        padding-right: 5.6rem;
+    }
+
+    .theme-toggle {
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translateY(-50%);
+    }
+
+    .theme-toggle:hover {
+        transform: translateY(-50%) rotate(15deg);
+    }
+}
+
 nav ul {
     display: flex;
     justify-content: flex-end;
