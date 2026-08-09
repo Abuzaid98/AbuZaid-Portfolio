@@ -582,7 +582,7 @@ header h1 a:hover,
 
 /* ---------- about ---------- */
 
-.wrap-3 p { margin-bottom: 2rem; }
+.wrap-3 .detail { margin-bottom: 2rem; }
 
 .file-photo {
     position: relative;
@@ -635,6 +635,12 @@ header h1 a:hover,
 
 .wrap-3 .all-detail > div {
     margin-bottom: 1.6rem;
+    align-items: center;
+}
+.wrap-3 .all-detail .detail-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrap-3 .about-cv {
@@ -707,6 +713,15 @@ header h1 a:hover,
     color: var(--text);
     border: 1px solid var(--border);
     flex-shrink: 0;
+    padding: .7rem;
+    overflow: hidden;
+}
+
+.exp-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
 }
 
 .exp-card-featured .exp-mark {

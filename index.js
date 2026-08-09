@@ -127,7 +127,7 @@ new Typed('#typed-role', {
 });
 
 new Typed('#element2', {
-    strings: [' Web Developer.', 'Frontend Developer.', 'React JS Developer.'],
+    strings: [' React.js Developer.', 'Frontend Developer.', 'Web Developer.'],
     typeSpeed: 50,
     backSpeed: 30,
     backDelay: 1400,
